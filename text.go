@@ -62,8 +62,8 @@ func TextConsumer() Consumer {
 			}
 		}
 
-		return fmt.Errorf("%v (%T) is not supported by the TextConsumer, %s",
-			data, data, "can be resolved by supporting TextUnmarshaler interface")
+		return fmt.Errorf("%v (%T) is not supported by the TextConsumer, %s, BODY: %s",
+			data, data, "can be resolved by supporting TextUnmarshaler interface", string(b))
 	})
 }
 
